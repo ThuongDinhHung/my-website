@@ -1,0 +1,858 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080a12;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 25px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 100;
+
+    transition: 0.4s;
+}
+
+.navbar.scrolled {
+    background: rgba(5, 7, 14, 0.85);
+
+    backdrop-filter: blur(15px);
+
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-family: Georgia, serif;
+
+    font-size: 1.4rem;
+
+    text-decoration: none;
+}
+
+.logo-symbol {
+    color: #e8c66b;
+
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+
+    gap: 40px;
+}
+
+nav a {
+    position: relative;
+
+    color: rgba(255,255,255,0.75);
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: currentColor;
+
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 1.5rem;
+}
+
+
+/* =========================================
+   GENERAL
+   ========================================= */
+
+.section-label {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #e8c66b;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 4px;
+}
+
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-weight: normal;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("assets/mid-autumn.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.03);
+}
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 5, 12, 0.85),
+            rgba(3, 5, 12, 0.35),
+            rgba(3, 5, 12, 0.1)
+        );
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(650px, 80%);
+
+    padding-top: 22vh;
+
+    margin-left: 8%;
+}
+
+.hero .eyebrow {
+    color: #e8c66b;
+
+    letter-spacing: 5px;
+
+    font-size: 0.75rem;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(4rem, 7vw, 7rem);
+
+    font-weight: normal;
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 35px;
+}
+
+.hero h1 span {
+    color: #e8c66b;
+}
+
+.hero-description {
+    max-width: 550px;
+
+    color: rgba(255,255,255,0.82);
+
+    line-height: 1.8;
+
+    font-size: 1.05rem;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.primary-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 15px 25px;
+
+    border: 1px solid #e8c66b;
+
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: #f1d277;
+
+    font-size: 0.9rem;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    background: #e8c66b;
+
+    color: #111;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 40px rgba(232,198,107,0.2);
+}
+
+.primary-button span {
+    font-size: 1.2rem;
+}
+
+.hero-bottom {
+    position: absolute;
+
+    left: 6%;
+    right: 6%;
+    bottom: 35px;
+
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 2;
+
+    color: rgba(255,255,255,0.6);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================
+   MISSION
+   ========================================= */
+
+.mission-section {
+    padding: 150px 8%;
+
+    background: #090c15;
+}
+
+.mission-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+.mission-content h2 {
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    line-height: 1;
+}
+
+.mission-text {
+    max-width: 550px;
+}
+
+.mission-text p {
+    margin-bottom: 25px;
+
+    color: rgba(255,255,255,0.7);
+
+    line-height: 1.8;
+
+    font-size: 1rem;
+}
+
+.mission-text strong {
+    color: white;
+}
+
+
+/* =========================================
+   FESTIVAL HERO
+   ========================================= */
+
+.festival {
+    background: #090c15;
+}
+
+.festival-hero {
+    position: relative;
+
+    height: 90vh;
+
+    overflow: hidden;
+}
+
+.festival-background {
+    position: absolute;
+
+    inset: 0;
+
+    background-size: cover;
+
+    background-position: center;
+
+    transition: transform 1s ease;
+}
+
+.festival-hero:hover .festival-background {
+    transform: scale(1.04);
+}
+
+.mid-autumn .festival-background {
+    background-image:
+        url("assets/mid-autumn.png");
+}
+
+.womens-day .festival-background {
+    background-image:
+        url("assets/womens-day.png");
+}
+
+.teachers-day .festival-background {
+    background-image:
+        url("assets/teachers-day.png");
+}
+
+.festival-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.75),
+            rgba(0,0,0,0.3),
+            rgba(0,0,0,0.1)
+        );
+}
+
+.festival-content {
+    position: absolute;
+
+    left: 8%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: min(650px, 70%);
+
+    z-index: 2;
+}
+
+.festival-content .eyebrow {
+    margin-bottom: 25px;
+
+    letter-spacing: 4px;
+
+    font-size: 0.7rem;
+}
+
+.festival-content h2 {
+    font-size: clamp(4rem, 7vw, 7rem);
+
+    line-height: 0.88;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+}
+
+.festival-content p {
+    max-width: 500px;
+
+    color: rgba(255,255,255,0.85);
+
+    line-height: 1.7;
+}
+
+.festival-number {
+    position: absolute;
+
+    right: 7%;
+
+    bottom: 50px;
+
+    z-index: 2;
+
+    font-family: Georgia, serif;
+
+    font-size: 5rem;
+
+    color: rgba(255,255,255,0.2);
+}
+
+
+/* Festival colors */
+
+.mid-autumn .eyebrow {
+    color: #f1c75b;
+}
+
+.womens-day .eyebrow {
+    color: #f2a7c6;
+}
+
+.teachers-day .eyebrow {
+    color: #9ed6c3;
+}
+
+
+/* =========================================
+   FESTIVAL INFORMATION
+   ========================================= */
+
+.festival-info {
+    padding: 140px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+    background: #0b0e18;
+}
+
+.festival-info.reverse {
+    background: #090c15;
+}
+
+.info-text {
+    max-width: 600px;
+}
+
+.info-text h3 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+
+    line-height: 1;
+
+    margin-bottom: 30px;
+}
+
+.info-text p {
+    color: rgba(255,255,255,0.68);
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+.info-image {
+    height: 550px;
+
+    overflow: hidden;
+}
+
+.info-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.8s ease;
+}
+
+.info-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   PODCAST VIDEO
+   ========================================= */
+
+.podcast-section {
+    padding: 130px 8%;
+
+    background: #070910;
+}
+
+.podcast-heading {
+    margin-bottom: 50px;
+}
+
+.podcast-heading h3 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+
+    margin-bottom: 15px;
+}
+
+.podcast-heading p {
+    color: rgba(255,255,255,0.65);
+}
+
+.video-container {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #000;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   SCHEDULE
+   ========================================= */
+
+.schedule-section {
+    padding: 150px 8%;
+
+    background: #0b0e18;
+}
+
+.schedule-section h2 {
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    margin-bottom: 15px;
+}
+
+.schedule-intro {
+    color: rgba(255,255,255,0.6);
+
+    margin-bottom: 70px;
+}
+
+.schedule-list {
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.schedule-item {
+    display: grid;
+
+    grid-template-columns: 100px 1fr 150px;
+
+    align-items: center;
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+
+    transition: 0.3s;
+}
+
+.schedule-item:hover {
+    padding-left: 15px;
+}
+
+.schedule-number {
+    font-family: Georgia, serif;
+
+    font-size: 1.5rem;
+
+    color: #e8c66b;
+}
+
+.schedule-item small {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: rgba(255,255,255,0.4);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+}
+
+.schedule-item h3 {
+    font-size: 1.5rem;
+}
+
+.schedule-date {
+    text-align: right;
+}
+
+.schedule-date strong {
+    font-family: Georgia, serif;
+
+    font-size: 1.5rem;
+}
+
+
+/* =========================================
+   CONTACT
+   ========================================= */
+
+.contact-section {
+    padding: 150px 8%;
+
+    background: #070910;
+}
+
+.contact-content {
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.contact-content h2 {
+    font-size: clamp(3rem, 6vw, 6rem);
+
+    line-height: 0.95;
+
+    margin-bottom: 30px;
+}
+
+.contact-content > p {
+    max-width: 550px;
+
+    margin: 0 auto 50px;
+
+    color: rgba(255,255,255,0.65);
+
+    line-height: 1.7;
+}
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 17px 20px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    background: rgba(255,255,255,0.03);
+
+    color: white;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #e8c66b;
+}
+
+.contact-form button {
+    align-self: center;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 50px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #05060b;
+
+    color: rgba(255,255,255,0.5);
+
+    font-size: 0.8rem;
+}
+
+.footer-logo {
+    font-family: Georgia, serif;
+
+    font-size: 1.3rem;
+
+    color: white;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero-content {
+        width: 85%;
+
+        margin-left: 7%;
+
+        padding-top: 25vh;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.5rem, 15vw, 5rem);
+    }
+
+    .hero-bottom {
+        display: none;
+    }
+
+    .mission-content,
+    .festival-info {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .festival-hero {
+        height: 75vh;
+    }
+
+    .festival-content {
+        width: 85%;
+
+        left: 7%;
+    }
+
+    .festival-content h2 {
+        font-size: clamp(3.5rem, 15vw, 5rem);
+    }
+
+    .info-image {
+        height: 400px;
+    }
+
+    .schedule-item {
+        grid-template-columns: 50px 1fr;
+
+        gap: 15px;
+    }
+
+    .schedule-date {
+        grid-column: 2;
+
+        text-align: left;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+}
