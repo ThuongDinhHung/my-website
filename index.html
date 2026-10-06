@@ -36,6 +36,16 @@
 
     </header>
 
+    <nav class="side-navigator" aria-label="Page sections">
+        <a href="#home" class="side-nav-link is-active" aria-label="Home" aria-current="location"><span>Home</span></a>
+        <a href="#mission" class="side-nav-link" aria-label="About Re:Tune"><span>About</span></a>
+        <a href="#festival-mid-autumn" class="side-nav-link" aria-label="Mid-Autumn Festival"><span>Mid-Autumn</span></a>
+        <a href="#festival-womens-day" class="side-nav-link" aria-label="Women's Day"><span>Women's Day</span></a>
+        <a href="#festival-teachers-day" class="side-nav-link" aria-label="Teacher's Day"><span>Teacher's Day</span></a>
+        <a href="#schedule" class="side-nav-link" aria-label="Schedule"><span>Schedule</span></a>
+        <a href="#contact" class="side-nav-link" aria-label="Contact"><span>Contact</span></a>
+    </nav>
+
 
     <!-- =========================================
          HERO / PODCAST INTRODUCTION
@@ -92,7 +102,7 @@
              PODCAST MISSION
              ========================================= -->
 
-        <section class="mission-section">
+        <section class="mission-section" id="mission">
 
             <div class="section-label">
                 ABOUT RE:TUNE
@@ -142,7 +152,7 @@
                  MID-AUTUMN
                  ===================================== -->
 
-            <article class="festival">
+            <article class="festival festival--mid-autumn" id="festival-mid-autumn">
 
                 <div class="festival-hero mid-autumn">
 
@@ -263,7 +273,7 @@
                  WOMEN'S DAY
                  ===================================== -->
 
-            <article class="festival">
+            <article class="festival festival--womens-day" id="festival-womens-day">
 
                 <div class="festival-hero womens-day">
 
@@ -359,19 +369,14 @@
 
                     </div>
 
-                    <div class="video-container">
-
-                        <video controls poster="assets/womens-day.png">
-
-                            <source
-                                src="assets/podcast-womens-day.mp4"
-                                type="video/mp4"
-                            >
-
-                            Your browser does not support video playback.
-
-                        </video>
-
+                    <div class="coming-soon" role="status">
+                        <span class="coming-soon-number">02</span>
+                        <div class="coming-soon-copy">
+                            <span class="section-label">EPISODE IN PRODUCTION</span>
+                            <h4>Coming soon</h4>
+                            <p>Stories of strength, told in their own time.</p>
+                        </div>
+                        <span class="coming-soon-mark" aria-hidden="true">✳</span>
                     </div>
 
                 </div>
@@ -383,7 +388,7 @@
                  TEACHER'S DAY
                  ===================================== -->
 
-            <article class="festival">
+            <article class="festival festival--teachers-day" id="festival-teachers-day">
 
                 <div class="festival-hero teachers-day">
 
@@ -478,17 +483,14 @@
 
                     </div>
 
-                    <div class="video-container">
-
-                        <video controls poster="assets/teachers-day.png">
-
-                            <source
-                                src="assets/podcast-teachers-day.mp4"
-                                type="video/mp4"
-                            >
-
-                            Your browser does not support video playback.
-
+                    <div class="coming-soon" role="status">
+                        <span class="coming-soon-number">03</span>
+                        <div class="coming-soon-copy">
+                            <span class="section-label">EPISODE IN PRODUCTION</span>
+                            <h4>Coming soon</h4>
+                            <p>A little gratitude is on its way to the people who teach us.</p>
+                        </div>
+                        <span class="coming-soon-mark" aria-hidden="true">✳</span>
                         </video>
 
                     </div>

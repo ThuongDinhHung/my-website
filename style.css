@@ -112,6 +112,78 @@ nav a:hover::after {
     width: 100%;
 }
 
+.side-navigator {
+    position: fixed;
+    top: 50%;
+    left: 24px;
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 30px;
+    background: rgba(5,7,14,0.38);
+    backdrop-filter: blur(12px);
+    opacity: 0.42;
+    transform: translateY(-50%);
+    transition: opacity 0.25s ease, background 0.25s ease;
+}
+
+.side-navigator:hover,
+.side-navigator:focus-within {
+    opacity: 1;
+    background: rgba(5,7,14,0.88);
+}
+
+.side-nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: white;
+    text-decoration: none;
+}
+
+.side-nav-link::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border: 1px solid rgba(255,255,255,0.75);
+    border-radius: 50%;
+    transition: width 0.25s ease, height 0.25s ease, background 0.25s ease;
+}
+
+.side-nav-link.is-active::before {
+    width: 10px;
+    height: 10px;
+    border-color: #e8c66b;
+    background: #e8c66b;
+}
+
+.side-nav-link span {
+    position: absolute;
+    left: 38px;
+    padding: 7px 10px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: #090c15;
+    color: white;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.side-nav-link:hover span,
+.side-nav-link:focus-visible span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .menu-button {
     display: none;
 
@@ -167,7 +239,7 @@ h3 {
     inset: 0;
 
     background-image:
-        url("assets/mid-autumn.png");
+        url("assets/podcast.png");
 
     background-size: cover;
 
@@ -367,6 +439,10 @@ h3 {
     height: 90vh;
 
     overflow: hidden;
+}
+
+.festival[id] {
+    scroll-margin-top: 20px;
 }
 
 .festival-background {
@@ -787,6 +863,21 @@ footer {
 
 @media (max-width: 800px) {
 
+    .side-navigator {
+        left: 7px;
+        gap: 5px;
+        padding: 8px 4px;
+    }
+
+    .side-nav-link {
+        width: 24px;
+        height: 25px;
+    }
+
+    .side-nav-link span {
+        left: 31px;
+    }
+
     nav {
         display: none;
     }
@@ -822,6 +913,36 @@ footer {
         height: 75vh;
     }
 
+    .festival--womens-day .festival-hero,
+    .festival--teachers-day .festival-hero {
+        height: 75vh;
+        min-height: 540px;
+    }
+
+    .festival--womens-day .festival-background,
+    .festival--teachers-day .festival-background {
+        left: 18%;
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .festival--womens-day .festival-overlay {
+        background: linear-gradient(90deg, rgba(53,33,46,0.96), rgba(53,33,46,0.55) 70%, rgba(53,33,46,0.2));
+    }
+
+    .festival--teachers-day .festival-overlay {
+        background: linear-gradient(90deg, rgba(23,43,44,0.96), rgba(23,43,44,0.55) 70%, rgba(23,43,44,0.2));
+    }
+
+    .festival--womens-day .festival-content,
+    .festival--teachers-day .festival-content {
+        left: 7%;
+        width: 84%;
+    }
+
+    .festival--womens-day .festival-number {
+        left: 7%;
+    }
+
     .festival-content {
         width: 85%;
 
@@ -834,6 +955,34 @@ footer {
 
     .info-image {
         height: 400px;
+    }
+
+    .festival--womens-day .info-image {
+        height: 430px;
+    }
+
+    .festival--womens-day .festival-info {
+        grid-template-columns: 1fr;
+    }
+
+    .festival--teachers-day .info-image {
+        height: 350px;
+    }
+
+    .coming-soon {
+        min-height: 250px;
+        gap: 18px;
+        padding: 35px 22px;
+    }
+
+    .coming-soon-number {
+        font-size: 4.5rem;
+    }
+
+    .coming-soon-mark {
+        right: -15px;
+        bottom: -35px;
+        font-size: 10rem;
     }
 
     .schedule-item {
@@ -854,5 +1003,216 @@ footer {
         gap: 20px;
 
         text-align: center;
+    }
+}
+
+.festival--womens-day .festival-hero {
+    height: 78vh;
+    min-height: 580px;
+    background: #35212e;
+}
+
+.festival--womens-day .festival-background {
+    left: 43%;
+    background-position: center 35%;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.festival--womens-day .festival-overlay {
+    background: linear-gradient(90deg, #35212e 0%, #35212e 33%, rgba(53,33,46,0.72) 52%, rgba(53,33,46,0.08) 100%);
+}
+
+.festival--womens-day .festival-content {
+    left: 12%;
+    width: min(560px, 48%);
+}
+
+.festival--womens-day .festival-number {
+    right: auto;
+    left: 12%;
+    bottom: 38px;
+    color: rgba(242,167,198,0.5);
+    font-size: 2rem;
+}
+
+.festival--womens-day .festival-info {
+    grid-template-columns: 0.8fr 1.2fr;
+    background: #211923;
+}
+
+.festival--womens-day .info-image {
+    height: 620px;
+    border-radius: 48% 48% 0 0;
+}
+
+.festival--teachers-day .festival-hero {
+    height: 82vh;
+    min-height: 620px;
+    background: #172b2c;
+}
+
+.festival--teachers-day .festival-background {
+    left: 35%;
+    background-position: center;
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.festival--teachers-day .festival-overlay {
+    background: linear-gradient(90deg, #172b2c 0%, #172b2c 31%, rgba(23,43,44,0.68) 53%, rgba(23,43,44,0.12) 100%);
+}
+
+.festival--teachers-day .festival-content {
+    left: 12%;
+    top: 44%;
+    width: min(610px, 53%);
+}
+
+.festival--teachers-day .festival-content h2 {
+    max-width: 540px;
+    font-size: clamp(4rem, 6.5vw, 6.5rem);
+}
+
+.festival--teachers-day .festival-number {
+    top: 38px;
+    right: 8%;
+    bottom: auto;
+    color: rgba(158,214,195,0.65);
+    font-size: 2rem;
+}
+
+.festival--teachers-day .festival-info {
+    background: #101d1e;
+}
+
+.festival--teachers-day .info-image {
+    height: 470px;
+    border: 1px solid rgba(158,214,195,0.28);
+    transform: rotate(2deg);
+}
+
+.coming-soon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: clamp(24px, 6vw, 90px);
+    min-height: 300px;
+    padding: 50px clamp(28px, 7vw, 100px);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: linear-gradient(115deg, #19171d, #0a0b12 70%);
+}
+
+.coming-soon-number {
+    color: rgba(255,255,255,0.12);
+    font-family: Georgia, serif;
+    font-size: clamp(5rem, 12vw, 10rem);
+    line-height: 1;
+}
+
+.coming-soon-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.coming-soon-copy .section-label {
+    margin-bottom: 14px;
+}
+
+.coming-soon-copy h4 {
+    margin-bottom: 12px;
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: normal;
+}
+
+.coming-soon-copy p {
+    max-width: 500px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+}
+
+.coming-soon-mark {
+    position: absolute;
+    right: 5%;
+    bottom: -60px;
+    color: rgba(255,255,255,0.06);
+    font-size: 15rem;
+    line-height: 1;
+}
+
+.festival--womens-day .coming-soon {
+    border-color: rgba(242,167,198,0.3);
+    background: linear-gradient(115deg, #30202b, #17141c 72%);
+}
+
+.festival--womens-day .coming-soon-copy .section-label {
+    color: #f2a7c6;
+}
+
+.festival--teachers-day .coming-soon {
+    border-color: rgba(158,214,195,0.3);
+    background: linear-gradient(115deg, #1b2c2b, #0b1114 72%);
+}
+
+.festival--teachers-day .coming-soon-copy .section-label {
+    color: #9ed6c3;
+}
+
+@media (max-width: 800px) {
+    .festival--womens-day .festival-hero,
+    .festival--teachers-day .festival-hero {
+        height: 75vh;
+        min-height: 540px;
+    }
+
+    .festival--womens-day .festival-background,
+    .festival--teachers-day .festival-background {
+        left: 18%;
+    }
+
+    .festival--womens-day .festival-overlay {
+        background: linear-gradient(90deg, rgba(53,33,46,0.96), rgba(53,33,46,0.55) 70%, rgba(53,33,46,0.2));
+    }
+
+    .festival--teachers-day .festival-overlay {
+        background: linear-gradient(90deg, rgba(23,43,44,0.96), rgba(23,43,44,0.55) 70%, rgba(23,43,44,0.2));
+    }
+
+    .festival--womens-day .festival-content,
+    .festival--teachers-day .festival-content {
+        left: 7%;
+        width: 84%;
+    }
+
+    .festival--womens-day .festival-number {
+        left: 7%;
+    }
+
+    .festival--womens-day .festival-info {
+        grid-template-columns: 1fr;
+    }
+
+    .festival--womens-day .info-image {
+        height: 430px;
+    }
+
+    .festival--teachers-day .info-image {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .coming-soon {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .coming-soon-number {
+        font-size: 3.5rem;
+    }
+
+    .side-navigator {
+        opacity: 0.3;
     }
 }
