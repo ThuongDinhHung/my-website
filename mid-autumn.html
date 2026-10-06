@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10171a">
+    <meta name="description" content="Follow the Mid-Autumn Festival through moonlight, lanterns, mooncakes, and the people who make a home beneath the same sky.">
+    <title>Under One Moon — Re:Tune</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mid-autumn.css">
+</head>
+<body class="moon-page">
+    <header class="moon-nav">
+        <a class="moon-brand" href="index.html#home" aria-label="Re:Tune home"><span class="brand-mark">R</span> Re:Tune</a>
+        <nav class="moon-links" aria-label="Main navigation">
+            <details class="moon-dropdown">
+                <summary>Festivals <span aria-hidden="true">+</span></summary>
+                <div class="moon-dropdown-menu">
+                    <a href="mid-autumn.html" aria-current="page">Mid-Autumn Festival</a>
+                    <a href="index.html#festival-womens-day">Women's Day</a>
+                    <a href="index.html#festival-teachers-day">Teacher's Day</a>
+                </div>
+            </details>
+            <a href="#journey">The journey</a>
+            <a href="index.html#schedule">Listen</a>
+        </nav>
+        <a class="nav-back" href="index.html#festivals"><span aria-hidden="true">&#8592;</span> All stories</a>
+    </header>
+
+    <main>
+        <section class="moon-hero" id="top" aria-labelledby="hero-title">
+            <img class="hero-art" src="assets/mid-autumn.png" alt="Lanterns floating above a moonlit lake beneath the full moon">
+            <div class="hero-grain" aria-hidden="true"></div>
+            <div class="hero-lantern hero-lantern--one" aria-hidden="true"></div>
+            <div class="hero-lantern hero-lantern--two" aria-hidden="true"></div>
+            <div class="hero-lantern hero-lantern--three" aria-hidden="true"></div>
+
+            <div class="hero-copy">
+                <p class="eyebrow reveal">FIELD NOTE 01 <span></span> THE HARVEST MOON</p>
+                <h1 id="hero-title" class="reveal">Under<br>one <em>moon.</em></h1>
+                <p class="hero-deck reveal">A night for looking up, finding your people, and remembering that the sky belongs to all of us.</p>
+                <a class="hero-link reveal" href="#journey">Enter the story <span aria-hidden="true">&#8595;</span></a>
+            </div>
+
+            <aside class="moon-widget reveal" aria-label="Tonight's field note">
+                <span class="moon-widget-label">TONIGHT'S FIELD NOTE</span>
+                <span class="moon-orb" aria-hidden="true"></span>
+                <strong>15th night</strong>
+                <span>When the moon is whole,<br>the table grows longer.</span>
+            </aside>
+
+            <div class="hero-footnote"><span>RE:TUNE CULTURAL JOURNAL</span><span>01 / 03</span></div>
+        </section>
+
+        <section class="journey-section" id="journey" aria-labelledby="journey-title">
+            <div class="section-head reveal">
+                <div>
+                    <p class="eyebrow eyebrow--ink">A STORY IN THREE MOVEMENTS</p>
+                    <h2 id="journey-title">Follow the <em>light.</em></h2>
+                </div>
+                <p class="section-intro">Move through the night from the first lantern to the last piece shared.</p>
+            </div>
+
+            <div class="journey-controls" aria-label="Story controls">
+                <span class="chapter-readout"><b id="chapter-current">01</b> <span>/ 03</span></span>
+                <div class="journey-progress" role="progressbar" aria-label="Story progress" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1"><span id="journey-progress-fill"></span></div>
+                <button class="arrow-control" type="button" data-direction="-1" aria-label="Previous chapter">&#8592;</button>
+                <button class="arrow-control" type="button" data-direction="1" aria-label="Next chapter">&#8594;</button>
+            </div>
+
+            <div class="story-track" id="storyTrack" tabindex="0" aria-label="Horizontal story chapters">
+                <article class="story-panel reveal" data-chapter="01">
+                    <div class="story-art story-art--sky">
+                        <img src="assets/mid-autumn.png" alt="A full moon rises over water and distant rooftops" loading="lazy">
+                        <span class="art-caption">THE SKY, HELD IN COMMON</span>
+                        <span class="art-coordinate">21:08 / EAST WINDOW</span>
+                    </div>
+                    <div class="story-copy">
+                        <span class="chapter-kicker">MOVEMENT 01 <i></i> THE LOOKING UP</span>
+                        <h3>One moon.<br><em>A thousand windows.</em></h3>
+                        <p>On the fifteenth night of the eighth lunar month, the moon arrives round and bright. Across neighborhoods and coastlines, people step outside to meet it.</p>
+                        <p>It is a small ritual with a wide horizon: pause, look up, and know that someone you love may be looking at the very same light.</p>
+                        <span class="chapter-mark">01</span>
+                    </div>
+                </article>
+
+                <article class="story-panel reveal" data-chapter="02">
+                    <div class="story-art story-art--lantern">
+                        <img src="assets/lantern.png" alt="Warm lantern light reflected across a quiet lake" loading="lazy">
+                        <span class="art-caption">A LITTLE SUN, CARRIED BY HAND</span>
+                        <span class="art-coordinate">21:26 / RIVERSIDE WALK</span>
+                    </div>
+                    <div class="story-copy">
+                        <span class="chapter-kicker">MOVEMENT 02 <i></i> THE CARRYING OF LIGHT</span>
+                        <h3>Make a little<br><em>room for wonder.</em></h3>
+                        <p>Paper lanterns turn an evening walk into a constellation at street level. Children lead the way; grandparents remember the shapes they carried long ago.</p>
+                        <p>Every lantern is temporary. That is part of its beauty: light is something we hold for one another, then let travel on.</p>
+                        <span class="chapter-mark">02</span>
+                    </div>
+                </article>
+
+                <article class="story-panel reveal" data-chapter="03">
+                    <div class="story-art story-art--water">
+                        <img src="assets/mooncake.png" alt="Moonlight and floating lotus lanterns on the water" loading="lazy">
+                        <span class="art-caption">THE TABLE IS NEVER FULL</span>
+                        <span class="art-coordinate">22:14 / HOME, SOMEWHERE</span>
+                    </div>
+                    <div class="story-copy">
+                        <span class="chapter-kicker">MOVEMENT 03 <i></i> THE SHARING</span>
+                        <h3>Cut the circle.<br><em>Pass it around.</em></h3>
+                        <p>A mooncake is made to be divided. Its careful pattern opens into smaller pieces, each one passed across a table where there is always space for one more.</p>
+                        <p>Reunion is not only a place. It is an action: saving a seat, making a call, telling the old story one more time.</p>
+                        <span class="chapter-mark">03</span>
+                    </div>
+                </article>
+            </div>
+            <p class="track-hint"><span aria-hidden="true">&#8592; &#8594;</span> Follow the chapters across</p>
+        </section>
+
+        <section class="together-section" aria-labelledby="together-title">
+            <div class="together-copy reveal">
+                <p class="eyebrow">A SMALL ATLAS OF TOGETHERNESS</p>
+                <h2 id="together-title">The details<br>make the <em>ritual.</em></h2>
+                <p>Traditions are not frozen in time. They travel with families, change shape, and find new ways to bring people close.</p>
+                <a class="text-link" href="index.html#festival-mid-autumn">Read the festival notes <span aria-hidden="true">&#8594;</span></a>
+            </div>
+            <div class="image-atlas reveal" aria-label="Three details from a moonlit festival night">
+                <figure class="atlas-piece atlas-piece--moon">
+                    <img src="assets/mid-autumn.png" alt="Bright full moon framed by evening clouds" loading="lazy">
+                    <figcaption>01 <span>LOOK UP</span></figcaption>
+                </figure>
+                <figure class="atlas-piece atlas-piece--lantern">
+                    <img src="assets/mid-autumn.png" alt="Glowing orange lantern against the night sky" loading="lazy">
+                    <figcaption>02 <span>CARRY LIGHT</span></figcaption>
+                </figure>
+                <figure class="atlas-piece atlas-piece--water">
+                    <img src="assets/mid-autumn.png" alt="Lanterns and moonlight reflected on the water" loading="lazy">
+                    <figcaption>03 <span>COME TOGETHER</span></figcaption>
+                </figure>
+                <span class="atlas-stamp" aria-hidden="true">SAME<br>SKY<br><b>+</b></span>
+            </div>
+        </section>
+
+        <section class="wish-section" aria-labelledby="wish-title">
+            <div class="wish-copy reveal">
+                <p class="eyebrow">A NOTE FOR THE NIGHT</p>
+                <h2 id="wish-title">Send a wish<br>into the <em>glow.</em></h2>
+                <p>Leave a small thought here. It will rise into this little paper sky and stay only on this page.</p>
+                <form class="wish-form" id="wishForm">
+                    <label for="wishInput">Your wish for someone</label>
+                    <div class="wish-input-row">
+                        <input id="wishInput" name="wish" maxlength="72" placeholder="May we find our way back..." required>
+                        <button type="submit" aria-label="Light this wish">&#8593;</button>
+                    </div>
+                    <span class="wish-count"><span id="wishCount">0</span> lights in the sky</span>
+                </form>
+            </div>
+            <div class="wish-sky" id="wishSky" aria-live="polite" aria-label="Wishes rising into the sky">
+                <span class="wish-moon" aria-hidden="true"></span>
+                <span class="wish-star wish-star--one" aria-hidden="true"></span>
+                <span class="wish-star wish-star--two" aria-hidden="true"></span>
+                <span class="wish-star wish-star--three" aria-hidden="true"></span>
+                <div class="wish-light wish-light--one" aria-hidden="true"></div>
+                <div class="wish-light wish-light--two" aria-hidden="true"></div>
+                <div class="wish-light wish-light--three" aria-hidden="true"></div>
+                <p class="wish-empty" id="wishEmpty">There is always room for one more light.</p>
+            </div>
+        </section>
+
+        <section class="closing-note reveal">
+            <span class="closing-rule"></span>
+            <p>Different homes. Different stories.<br><em>One moon to come home by.</em></p>
+            <a href="#top" class="back-top">BACK TO THE MOON <span aria-hidden="true">&#8593;</span></a>
+        </section>
+    </main>
+
+    <footer class="moon-footer">
+        <a class="moon-brand" href="index.html#home"><span class="brand-mark">R</span> Re:Tune</a>
+        <span>STORIES THAT BRING US TOGETHER</span>
+        <a href="index.html#festivals">All festivals <span aria-hidden="true">&#8594;</span></a>
+    </footer>
+
+    <script src="mid-autumn.js"></script>
+</body>
+</html>

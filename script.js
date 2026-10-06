@@ -1,4 +1,20 @@
 const navbar = document.querySelector(".navbar");
+const menuButton = document.querySelector("#menuButton");
+const primaryNav = document.querySelector("#primaryNav");
+
+menuButton.addEventListener("click", () => {
+    const isOpen = navbar.classList.toggle("menu-open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+});
+
+primaryNav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+        navbar.classList.remove("menu-open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation");
+    }
+});
 
 window.addEventListener("scroll", () => {
 
