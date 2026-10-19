@@ -29,7 +29,7 @@
                 <summary>Festivals</summary>
                 <div class="festival-menu">
                     <a href="mid-autumn.html">Mid-Autumn Festival</a>
-                    <a href="#festival-womens-day">Women's Day</a>
+                    <a href="womens-day.html">Women's Day</a>
                     <a href="#festival-teachers-day">Teacher's Day</a>
                 </div>
             </details>
@@ -152,6 +152,67 @@
              FESTIVALS
              ========================================= -->
 
+        <!-- =========================================
+             AIRING SCHEDULE
+             ========================================= -->
+
+        <section class="schedule-section" id="schedule">
+
+            <div class="section-label">
+                AIRING SCHEDULE
+            </div>
+
+            <h2>
+                Tune in with us.
+            </h2>
+
+            <p class="schedule-intro">
+                Three stories. Three celebrations.
+                One journey through culture.
+            </p>
+
+            <div class="schedule-list">
+
+                <a class="schedule-item" href="#podcast-mid-autumn" aria-label="Go to the Mid-Autumn Festival podcast">
+                    <span class="schedule-number">01</span>
+                    <div>
+                        <small>EPISODE</small>
+                        <h3>Mid-Autumn Festival</h3>
+                    </div>
+                    <div class="schedule-date">
+                        <small>FRIDAY 25th December</small>
+                        <strong>20:00</strong>
+                    </div>
+                </a>
+
+                <a class="schedule-item" href="#podcast-womens-day" aria-label="Go to the Women's Day podcast">
+                    <span class="schedule-number">02</span>
+                    <div>
+                        <small>EPISODE</small>
+                        <h3>Women's Day</h3>
+                    </div>
+                    <div class="schedule-date">
+                        <small>TUESDAY 20th October</small>
+                        <strong>20:00</strong>
+                    </div>
+                </a>
+
+                <a class="schedule-item" href="#podcast-teachers-day" aria-label="Go to the Teacher's Day podcast">
+                    <span class="schedule-number">03</span>
+                    <div>
+                        <small>EPISODE</small>
+                        <h3>Teacher's Day</h3>
+                    </div>
+                    <div class="schedule-date">
+                        <small>FRIDAY 20th November</small>
+                        <strong>20:00</strong>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+
         <section id="festivals" class="festivals-section">
 
 
@@ -258,7 +319,7 @@
 
                     <div class="video-container">
 
-                        <video controls poster="assets/mid-autumn-thumbnail.png">
+                        <video id="podcast-mid-autumn" controls poster="assets/mid-autumn-thumbnail.png">
 
                             <source
                                 src="assets/podcast-mid-autumn.mp4"
@@ -303,6 +364,10 @@
                             shape our lives, and influence the world
                             around us.
                         </p>
+
+                        <a class="festival-story-link" href="womens-day.html">
+                            Explore the full story <span aria-hidden="true">&#8594;</span>
+                        </a>
 
                     </div>
 
@@ -376,14 +441,19 @@
 
                     </div>
 
-                    <div class="coming-soon" role="status">
-                        <span class="coming-soon-number">02</span>
-                        <div class="coming-soon-copy">
-                            <span class="section-label">EPISODE IN PRODUCTION</span>
-                            <h4>Coming soon</h4>
-                            <p>Stories of strength, told in their own time.</p>
-                        </div>
-                        <span class="coming-soon-mark" aria-hidden="true">✳</span>
+                    <div class="video-container">
+
+                        <video id="podcast-womens-day" controls poster="assets/teachers-day-thumbnail.png">
+
+                            <source
+                                src="assets/podcast-teachers-day.mp4"
+                                type="video/mp4"
+                            >
+
+                            Your browser does not support video playback.
+
+                        </video>
+
                     </div>
 
                 </div>
@@ -490,7 +560,7 @@
 
                     </div>
 
-                    <div class="coming-soon" role="status">
+                    <div class="coming-soon" id="podcast-teachers-day" role="status">
                         <span class="coming-soon-number">03</span>
                         <div class="coming-soon-copy">
                             <span class="section-label">EPISODE IN PRODUCTION</span>
@@ -513,84 +583,6 @@
              AIRING SCHEDULE
              ========================================= -->
 
-        <section class="schedule-section" id="schedule">
-
-            <div class="section-label">
-                AIRING SCHEDULE
-            </div>
-
-            <h2>
-                Tune in with us.
-            </h2>
-
-            <p class="schedule-intro">
-                Three stories. Three celebrations.
-                One journey through culture.
-            </p>
-
-
-            <div class="schedule-list">
-
-                <div class="schedule-item">
-
-                    <span class="schedule-number">
-                        01
-                    </span>
-
-                    <div>
-                        <small>EPISODE</small>
-                        <h3>Mid-Autumn Festival</h3>
-                    </div>
-
-                    <div class="schedule-date">
-                        <small>FRIDAY 25th December</small>
-                        <strong>20:00</strong>
-                    </div>
-
-                </div>
-
-
-                <div class="schedule-item">
-
-                    <span class="schedule-number">
-                        02
-                    </span>
-
-                    <div>
-                        <small>EPISODE</small>
-                        <h3>Women's Day</h3>
-                    </div>
-
-                    <div class="schedule-date">
-                        <small>TUESDAY 20th October</small>
-                        <strong>20:00</strong>
-                    </div>
-
-                </div>
-
-
-                <div class="schedule-item">
-
-                    <span class="schedule-number">
-                        03
-                    </span>
-
-                    <div>
-                        <small>EPISODE</small>
-                        <h3>Teacher's Day</h3>
-                    </div>
-
-                    <div class="schedule-date">
-                        <small>FRIDAY 20th November</small>
-                        <strong>20:00</strong>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
 
         <!-- =========================================
              CONTACT
@@ -603,6 +595,47 @@
                 <span class="section-label">
                     GET IN TOUCH
                 </span>
+                    
+                <div class="facebook-showcase">
+                    <a class="facebook-preview" href="https://www.facebook.com/muayeuthuong.vakyuc/" target="_blank" rel="noopener noreferrer" aria-label="Open the Mùa Yêu Thương và Ký Ức Facebook page">
+                        <div class="facebook-preview-topline">
+                            <span><i></i><i></i><i></i></span>
+                            <span>FACEBOOK PAGE / RE:TUNE</span>
+                            <span aria-hidden="true">&#8599;</span>
+                        </div>
+                        <img src="assets/facebook.PNG" alt="Preview of the Mùa Yêu Thương & Ký Ức Facebook page" loading="lazy">
+                        <span class="facebook-preview-caption">A little window into our community</span>
+                    </a>
+
+                    <div class="facebook-connect">
+                        <div class="facebook-page-identity">
+                            <span class="facebook-brand-mark" aria-hidden="true">f</span>
+                            <div>
+                                <span class="facebook-kicker">FIND US ON FACEBOOK</span>
+                                <h3>Mùa Yêu Thương &amp; Ký Ức</h3>
+                            </div>
+                        </div>
+
+                        <p class="facebook-description">Những câu chuyện, ký ức và yêu thương được sẻ chia.</p>
+
+                        <div class="facebook-qr-block">
+                            <div class="facebook-qr-frame">
+                                <img src="assets/QR-code.png" alt="QR code for the Facebook page" loading="lazy">
+                            </div>
+                            <div class="facebook-qr-copy">
+                                <span class="facebook-kicker">SCAN TO CONNECT</span>
+                                <strong>Quét mã để ghé thăm trang</strong>
+                                <span>Đưa camera điện thoại vào mã QR</span>
+                            </div>
+                        </div>
+
+                        <a class="facebook-visit" href="https://www.facebook.com/muayeuthuong.vakyuc/" target="_blank" rel="noopener noreferrer">
+                            Visit our Facebook page <span aria-hidden="true">&#8599;</span>
+                        </a>
+                        <span class="facebook-url">facebook.com/muayeuthuong.vakyuc</span>
+                    </div>
+                </div>
+
 
                 <h2>
                     Have a story<br>

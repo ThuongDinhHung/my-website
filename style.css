@@ -627,6 +627,29 @@ h3 {
     line-height: 1.7;
 }
 
+.festival-story-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 100%;
+    margin-top: 22px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgba(255,255,255,0.58);
+    color: white;
+    font-size: 0.78rem;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+}
+
+.festival-story-link:hover {
+    gap: 21px;
+}
+
+.festival--womens-day .festival-story-link {
+    border-color: rgba(242,167,198,0.72);
+    color: #ffe0eb;
+}
+
 .festival-number {
     position: absolute;
 
@@ -731,6 +754,12 @@ h3 {
     background: #070910;
 }
 
+#podcast-mid-autumn,
+#podcast-womens-day,
+#podcast-teachers-day {
+    scroll-margin-top: 100px;
+}
+
 .podcast-heading {
     margin-bottom: 50px;
 }
@@ -805,10 +834,19 @@ h3 {
     border-bottom: 1px solid rgba(255,255,255,0.15);
 
     transition: 0.3s;
+
+    color: inherit;
+
+    text-decoration: none;
 }
 
 .schedule-item:hover {
     padding-left: 15px;
+}
+
+.schedule-item:focus-visible {
+    outline: 2px solid #e8c66b;
+    outline-offset: 4px;
 }
 
 .schedule-number {
@@ -880,6 +918,214 @@ h3 {
     color: rgba(255,255,255,0.65);
 
     line-height: 1.7;
+}
+
+.facebook-showcase {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+    gap: 16px;
+    margin: 0 auto 48px;
+    text-align: left;
+}
+
+.facebook-preview {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: #f4f2ef;
+    color: white;
+    text-decoration: none;
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.facebook-preview:hover {
+    transform: translateY(-4px);
+    border-color: #1877f2;
+    box-shadow: 0 18px 44px rgba(0,0,0,0.28);
+}
+
+.facebook-preview:focus-visible,
+.facebook-visit:focus-visible {
+    outline: 2px solid #1877f2;
+    outline-offset: 4px;
+}
+
+.facebook-preview-topline {
+    display: flex;
+    height: 38px;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 13px;
+    background: #11141b;
+    color: rgba(255,255,255,0.65);
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+}
+
+.facebook-preview-topline > span:first-child {
+    display: flex;
+    gap: 4px;
+}
+
+.facebook-preview-topline i {
+    width: 6px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+}
+
+.facebook-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.7s cubic-bezier(0.2,0.7,0.2,1);
+}
+
+.facebook-preview:hover img {
+    transform: scale(1);
+}
+
+.facebook-preview-caption {
+    display: block;
+    padding: 10px 14px;
+    background: #11141b;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+}
+
+.facebook-connect {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 24px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: linear-gradient(145deg, #111823, #0b0e15 78%);
+    text-align: left;
+}
+
+.facebook-page-identity {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.facebook-brand-mark {
+    display: grid;
+    width: 42px;
+    aspect-ratio: 1;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 12px;
+    background: #1877f2;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1;
+    padding-top: 6px;
+}
+
+.facebook-kicker {
+    display: block;
+    margin-bottom: 5px;
+    color: #7daef8;
+    font-size: 0.58rem;
+    letter-spacing: 0.16em;
+}
+
+.facebook-page-identity h3 {
+    margin: 0;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.05rem, 1.7vw, 1.4rem);
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.facebook-description {
+    margin: 0;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.78rem;
+    line-height: 1.65;
+}
+
+.facebook-qr-block {
+    display: grid;
+    grid-template-columns: 116px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    padding: 13px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.035);
+}
+
+.facebook-qr-frame {
+    padding: 6px;
+    background: white;
+}
+
+.facebook-qr-frame img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    image-rendering: pixelated;
+}
+
+.facebook-qr-copy strong,
+.facebook-qr-copy > span:last-child {
+    display: block;
+}
+
+.facebook-qr-copy strong {
+    margin: 7px 0;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.facebook-qr-copy > span:last-child {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.67rem;
+    line-height: 1.5;
+}
+
+.facebook-visit {
+    display: flex;
+    min-height: 45px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 15px;
+    background: #1877f2;
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.facebook-visit:hover {
+    background: #3389ff;
+    box-shadow: 0 8px 22px rgba(24,119,242,0.28);
+}
+
+.facebook-visit span {
+    font-size: 1.05rem;
+}
+
+.facebook-url {
+    color: rgba(255,255,255,0.38);
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    overflow-wrap: anywhere;
 }
 
 .contact-form {
@@ -1121,6 +1367,22 @@ footer {
         grid-template-columns: 50px 1fr;
 
         gap: 15px;
+    }
+
+    .facebook-showcase {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .facebook-connect {
+        gap: 16px;
+        padding: 19px;
+    }
+
+    .facebook-qr-block {
+        grid-template-columns: 96px minmax(0, 1fr);
+        gap: 12px;
+        padding: 10px;
     }
 
     .schedule-date {
